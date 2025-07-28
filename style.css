@@ -8,10 +8,12 @@
 /*Couleurs thème nuit (valeurs par défaut)*/
 :root {
   --color-text: #ffffff;                                          /* texte principal */
-  --color-subtext: #cccccc;                                       /* bio, sous-titres */
+  --color-subtext: #ffffff;                                       /* bio, sous-titres */
   --color-link-bg: linear-gradient(145deg, #7f00ff, #e100ff);   /* fond des boutons */
   --color-link-shadow: rgba(255, 0, 255, 0.3);                    /* ombre des boutons */
   --color-link-hover: rgba(255, 0, 255, 0.5);                     /* ombre au survol */
+  --color-signature: #bbbbbb;                                     /*footer*/
+
 }
 
 /*Couleurs thème jour*/
@@ -21,6 +23,7 @@ body.light {
   --color-link-bg: linear-gradient(145deg, #6a11cb, #2575fc);   /* fond des boutons */
   --color-link-shadow: rgba(37, 117, 252, 0.3);                    /* ombre des boutons */
   --color-link-hover: rgba(37, 117, 252, 0.5);                     /* ombre au survol */
+  --color-signature: #444444;                                     /*footer*/
 }
 
 /* BASE */
@@ -243,4 +246,13 @@ body.light .theme-toggle img {
     width: 28px;
     height: 28px;
   }
+}
+
+.signature {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 300px;
+  color: var(--color-signature);
+  opacity: 0.7;
+  transition: color 0.3s ease;
 }

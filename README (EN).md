@@ -82,8 +82,17 @@ linktree/
 You can:
 
 - Replace `logo.png` with your own avatar/logo
-- Replace `background.mp4` with your video
-- Edit the links in `index.html`:
+- Replace `background-night.mp4` and `background-day.mp4` with your own videos
+- Edit the links in `index.html`
+- Customize colors in the `style.css` file using **CSS variables**:
+  - Dynamic color control with:
+    - `--color-text` → main text color
+    - `--color-subtext` → subtitle / bio color
+    - `--color-link-bg` → button background
+    - `--color-link-shadow` → button shadow
+    - `--color-link-hover` → hover shadow
+
+💡 Each theme (dark and light) has its own set of color values!
 
 ```html
 <a href="https://twitch.tv/YOURNAME" class="link" target="_blank">🎮 Twitch</a>

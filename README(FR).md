@@ -82,8 +82,18 @@ linktree/
 Tu peux :
 
 - Modifier l’image `logo.png` → ton avatar ou logo perso
-- Modifier `background.mp4` → ta propre vidéo de fond
-- Modifier les liens dans `index.html` :
+- Modifier les vidéos `background-night.mp4` et `background-day.mp4` → tes propres ambiances
+- Modifier les liens dans `index.html`
+- Personnaliser les couleurs du site directement dans `style.css` :
+  - Les couleurs sont gérées dynamiquement avec des **variables CSS**
+  - Tu peux choisir :
+    - `--color-text` → couleur du texte principal
+    - `--color-subtext` → couleur de la bio et des sous-textes
+    - `--color-link-bg` → fond des boutons (Twitch, YouTube, etc.)
+    - `--color-link-shadow` → ombre du bouton
+    - `--color-link-hover` → effet au survol
+
+💡 Les couleurs sont **différentes pour le thème sombre et clair**.
 
 ```html
 <a href="https://twitch.tv/TON_NOM" class="link" target="_blank">🎮 Twitch</a>
