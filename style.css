@@ -1,0 +1,221 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+  background-color: #0f0f0f;
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* FOND VIDÉO */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.3);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* AVATAR */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: popIn 0.8s ease-out forwards;
+}
+
+/* TITRE ET BIO */
+h1 {
+  font-size: 2rem;
+  margin: 20px 0 10px;
+  animation: fadeIn 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.bio {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.4s forwards;
+  color: #ccc;
+}
+
+/* LIENS */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.link {
+  padding: 14px 24px;
+  background: linear-gradient(145deg, #7f00ff, #e100ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 32px;
+  font-size: 1.1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(255, 0, 255, 0.3);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 0, 255, 0.5);
+}
+
+/* FOOTER */
+footer {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* BOUTON JOUR/NUIT */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadePop 0.6s ease-out 0.4s forwards;
+}
+
+.theme-toggle img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.2));
+}
+
+.theme-toggle:hover img {
+  transform: scale(1.15);
+}
+
+.theme-toggle.active img {
+  animation: glowPulseImg 0.6s ease forwards;
+}
+
+/* APPARITION DOUCE DU BOUTON */
+@keyframes fadePop {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* EFFET GLOW AU CLIC */
+@keyframes glowPulseImg {
+  0% {
+    filter: drop-shadow(0 0 0px transparent);
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    transform: scale(1.5);
+  }
+  100% {
+    filter: drop-shadow(0 0 0px transparent);
+    transform: scale(1);
+  }
+}
+
+/* THÈME CLAIR */
+body.light {
+  background: #f0f0f0;
+  color: #111;
+}
+
+body.light .bg-video {
+  filter: brightness(0.6) saturate(0.7);
+}
+
+body.light .link {
+  background: linear-gradient(145deg, #6a11cb, #2575fc);
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.3);
+}
+
+body.light .link:hover {
+  box-shadow: 0 6px 25px rgba(37, 117, 252, 0.5);
+}
+
+body.light footer a {
+  color: #000;
+}
+
+body.light .theme-toggle img {
+  content: url("assets/sun.png");
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+}
+
+/* ANIMATIONS ENTRÉE */
+@keyframes popIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .link {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .theme-toggle img {
+    width: 28px;
+    height: 28px;
+  }
+}
