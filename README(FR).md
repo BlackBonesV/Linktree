@@ -45,7 +45,8 @@ linktree/
 ├── README.md ← ce fichier
 └── assets/
 ├── logo.png ← ton avatar/logo
-├── background.mp4 ← ta vidéo de fond (format .mp4 conseillé)
+├── background-night.mp4 ← vidéo utilisée en mode nuit (par défaut) --> (mp4 conseillé)
+├── background-day.mp4 ← vidéo utilisée en mode jour --> (mp4 conseillé)
 ├── moon.png ← icône du thème nuit
 └── sun.png ← icône du thème jour
 
@@ -98,6 +99,21 @@ A : Ils sont remplacés par les images sun.png et moon.png dans /assets/.
 
 Q : Mon site ne s'affiche pas bien sur téléphone ?
 A : Le design est responsive, mais tu peux ajuster les tailles dans le fichier style.css (section @media).
+
+---
+
+## 🎬 Transition vidéo jour/nuit (fondu)
+
+Ce site utilise **deux vidéos superposées** pour créer un **effet de fondu fluide** quand on change de thème (jour/nuit).  
+Résultat : pas de flash brutal, juste une transition douce ✨
+
+### Comment ça marche :
+
+- `background-night.mp4` = s'affiche en thème sombre
+- `background-day.mp4` = s'affiche en thème clair
+- Un script gère l'opacité des deux vidéos
+
+Pas besoin de faire quoi que ce soit de plus : il suffit de **fournir les deux fichiers vidéo dans le dossier `assets/`** avec les bons noms ✅
 
 ## 👨‍💻 Crédits & auteur
 

@@ -7,10 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="assets/background.mp4" type="video/mp4" />
-    Ton navigateur ne supporte pas les vidéos HTML5.
-  </video>
+<video id="video-night" class="bg-video visible" autoplay muted loop playsinline>
+  <source src="assets/background-night.mp4" type="video/mp4" />
+</video>
+
+<video id="video-day" class="bg-video hidden" autoplay muted loop playsinline>
+  <source src="assets/background-day.mp4" type="video/mp4" />
+</video>
+
+
 
 <button class="theme-toggle" aria-label="Changer le thème">
   <img src="assets/moon.png" alt="Theme icon" />
@@ -22,9 +27,10 @@
     <p class="bio">Créateur Twitch. Passionné par le monde magique du numérique 🐉✨</p>
 
     <div class="links">
-      <a href="https://twitch.tv/BlackBonesV2" class="link" target="_blank">🎮 Twitch</a>
-      <a href="https://www.youtube.com/@BlackBonesV2" class="link" target="_blank">📺 YouTube</a>
-      <a href="https://discord.ggHVdTDEqfX9/..." class="link" target="_blank">💬 Discord</a>
+      <a href="https://twitch.tv/BlackBones" class="link" target="_blank">🎮 Twitch</a>
+      <a href="https://youtube.com/..." class="link" target="_blank">📺 YouTube</a>
+      <a href="https://discord.gg/..." class="link" target="_blank">💬 Discord</a>
+      <a href="https://twitter.com/..." class="link" target="_blank">🐦 Twitter / X</a>
     </div>
 
     <footer>

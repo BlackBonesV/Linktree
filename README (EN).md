@@ -44,7 +44,8 @@ linktree/
 ├── README.md ← this file
 └── assets/
 ├── logo.png ← your avatar/logo
-├── background.mp4 ← your background video (recommended .mp4)
+├── background-night.mp4 ← video used in night mode (default) -->(recommended .mp4)
+├── background-day.mp4 ← video used in light mode --> (recommended .mp4)
 ├── moon.png ← icon for dark mode
 └── sun.png ← icon for light mode
 
@@ -98,6 +99,21 @@ A: These are replaced with custom images: sun.png and moon.png.
 
 Q: It doesn’t look good on mobile?
 A: The design is responsive, but you can adjust sizes inside style.css (@media section).
+
+---
+
+## 🎬 Smooth Day/Night Video Transition
+
+This site uses **two stacked videos** to create a **crossfade effect** when switching between light and dark mode.  
+This makes the theme change feel smooth and cinematic, with no visual flashes.
+
+### How it works:
+
+- `background-night.mp4` = used for dark mode
+- `background-day.mp4` = used for light mode
+- A script handles the opacity and playback
+
+✅ Just include both files in your `/assets/` folder with those exact names — no extra setup needed!
 
 ## 👨‍💻 Credits & Author
 
